@@ -1,0 +1,13 @@
+void main() {
+  double convertKgToPounds(double kilograms) {
+    return kilograms * 2.20462;
+  }
+  stdout.write('Enter the weight in kilograms: ');
+  double? kilograms = double.tryParse(stdin.readLineSync()!);
+  if (kilograms != null) {
+    double pounds = convertKgToPounds(kilograms);
+    print('$kilograms kg is equal to $pounds pounds.');
+  } else {
+    print('Invalid input. Please enter a valid number.');
+  }
+}
